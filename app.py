@@ -2,23 +2,28 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 import folium
+import random
 
 app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    return render_template('home.html')
+    random_image_selected="img"+str(random.randint(1,3))+".jpg"
+    return render_template('home.html',random_image=random_image_selected)
 
 
 @app.route('/about')
 def about_page():
     return render_template('about.html')
 
+# @app.route('/districts')
+# def district_page():
+#     return render_template('districts.html')
 
 @app.route('/districts')
 def district_page():
-    return render_template('districts.html')
-
+    places=["Anantapur","Chittoor","East_Godavari","Guntur","Kadapa","Krishna","Kurnool","Nellore","Prakasam","Srikakulam","Visakhapatnam","Vizianagaram","West_Godavari"]
+    return render_template('test.html',places=places)
 
 @app.route('/Anantapur')
 def anantapur_page():
@@ -520,7 +525,7 @@ def predict_West_Godavari():
 
 @app.route('/map')
 def map_display():
-    m = folium.Map(location=[16.196333585459023, 80.84786303681183], zoom_start=6)
+    m = folium.Map(location=[16.196333585459023, 80.84786303681183], zoom_start=7)
     folium.Marker([14.683886299171148, 77.60021860852216], popup='<a target="_blank" href=http://localhost:5000/Anantapur>Predict!</a>', tooltip= "Anantapur").add_to(m)
     folium.Marker([13.21786796676931, 79.09944733592019],  popup='<a target="_blank" href=http://localhost:5000/Chittoor>Predict!</a>', tooltip= "Chittoor").add_to(m)
     folium.Marker([17.370341225421864, 82.01079117056173], popup='<a target="_blank" href=http://localhost:5000/East_Godavari>Predict!</a>', tooltip= "East Godavari").add_to(m)
@@ -538,11 +543,6 @@ def map_display():
     # start_coords = (46.9540700, 142.7360300)
     # folium_map = folium.Map(location=start_coords, zoom_start=14)
     return m._repr_html_()
-
-@app.route('/test')
-def test_url():
-    places=["Anantapur","Chittoor","East_Godavari","Guntur","Kadapa","Krishna","Kurnool","Nellore","Prakasam","Srikakulam","Visakhapatnam","Vizianagaram","West_Godavari"]
-    return render_template('test.html',places=places)
 
 if __name__ == "__main__":
     app.run(debug=True)

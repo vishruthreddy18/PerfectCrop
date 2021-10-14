@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title_block %}
+    <title> Krishna </title> 
+{% endblock %}
+
+{% block body_block %}
+    <div class="container">
+        <br>
+        <form method="POST" action="{{url_for('predict_Krishna')}}">
+            <div class="col-sm-7">
+                <label for="pH" class="form-label">power of Hydrogen (pH)</label>
+                <input type="number", class="form-control", id="pH", name="pH", step="any", min="6", max="10", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="EC" class="form-label">Electrical Conductivity (EC)</label>
+                <input type="number", class="form-control", id="EC", name="EC", step="any", min="0", max="24", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="OC" class="form-label">Organic Carbon (OC)</label>
+                <input type="number", class="form-control", id="OC", name="OC", step="any", min="0", max="1.3", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="K" class="form-label">Potassium (K)</label>
+                <input type="number", class="form-control", id="K", name="K", step="any", min="0", max="110", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="Ca" class="form-label">Calcium (Ca)</label>
+                <input type="number", class="form-control", id="Ca", name="Ca", step="any", min="600", max="9750", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="Zn" class="form-label">Zinc (Zn)</label>
+                <input type="number", class="form-control", id="Zn", name="Zn", step="any", min="0", max="10", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="Soil Type" class="form-label">Soil Type</label>
+                <select id="Soil Type" name="SoilType" class="form-select w-100" required>
+                    <option value="Red Soil" selected>Red Soil</option>
+                    <option value="Black Soil">Black Soil</option>
+                </select>   
+            </div>
+            <br>
+            <br>
+            <div class="col-sm-7">
+                <input type="submit", class="btn btn-primary", value="Predict!">
+            </div>
+            <br>
+            <br> 
+        </form>
+    </div>
+{% endblock %}

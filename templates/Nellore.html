@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title_block %}
+    <title> Nellore </title> 
+{% endblock %}
+
+{% block body_block %}
+    <div class="container">
+        <br>
+        <form method="POST" action="{{url_for('predict_Nellore')}}">
+            <div class="col-sm-7">
+                <label for="pH" class="form-label">power of Hydrogen (pH)</label>
+                <input type="number", class="form-control", id="pH", name="pH", step="any", min="5", max="10", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="EC" class="form-label">Electrical Conductivity (EC)</label>
+                <input type="number", class="form-control", id="EC", name="EC", step="any", min="0", max="8.2", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="OC" class="form-label">Organic Carbon (OC)</label>
+                <input type="number", class="form-control", id="OC", name="OC", step="any", min="0", max="1.5", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="P" class="form-label">Phosphorus (P)</label>
+                <input type="number", class="form-control", id="P", name="P", step="any", min="0", max="150", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="K" class="form-label">Potassium (K)</label>
+                <input type="number", class="form-control", id="K", name="K", step="any", min="27", max="2100", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="Ca" class="form-label">Calcium (Ca)</label>
+                <input type="number", class="form-control", id="Ca", name="Ca", step="any", min="225", max="9780", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="Mg" class="form-label">Magnesium (Mg)</label>
+                <input type="number", class="form-control", id="Mg", name="Mg", step="any", min="40", max="2000", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="Zn" class="form-label">Zinc (Zn)</label>
+                <input type="number", class="form-control", id="Zn", name="Zn", step="any", min="0", max="25", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="Soil Type" class="form-label">Soil Type</label>
+                <select id="Soil Type" name="SoilType" class="form-select w-100" required>
+                    <option value="Red Soil" selected>Red Soil</option>
+                    <option value="Black Soil">Black Soil</option>
+                </select>   
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <input type="submit", class="btn btn-primary", value="Predict!">
+            </div>
+            <br>
+            <br> 
+        </form>
+    </div>
+{% endblock %}

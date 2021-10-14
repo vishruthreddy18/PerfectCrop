@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% block title_block %}
+    <title> Districts </title> 
+{% endblock %}
+
+{% block body_block %}
+    <div class="continer">
+            <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Pick Your District</h1>
+    </div>
+    <center>
+      <iframe src="http://localhost:5000/map" width=70% height=1000vh ></iframe>
+    </center>
+    <div class="container center">
+      <div class="row">
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Anantapur</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{url_for('anantapur_page')}}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+      </div>
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Chittoor</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{url_for('chittoor_page')}}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">East Godavari</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{url_for('East_Godavari_page')}}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  
+  <div class="container center">
+      <div class="row">
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Guntur</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{ url_for('Guntur_page') }}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+      </div>
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Kadapa</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{ url_for('Kadapa_page') }}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Krishna</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{ url_for('Krishna_page') }}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  
+  <div class="container center">
+      <div class="row">
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Kurnool</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{ url_for('Kurnool_page') }}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+      </div>
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Nellore</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{ url_for('Nellore_page') }}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Prakasam</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{ url_for('Prakasam_page') }}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  
+  <div class="container center">
+      <div class="row">
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Srikakulam</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{ url_for('Srikakulam_page') }}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+      </div>
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Visakhapatnam</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{ url_for('Visakhapatnam_page') }}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">Vizianagaram</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{ url_for('Vizianagaram_page') }}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  
+  <div class="container center">
+      <div class="row">
+        <div class="col">
+          <!-- One of three columns -->
+        </div>
+      </div>
+        <div class="col">
+          <!-- One of three columns -->
+          <div class="card text-center" style="width: 18rem; border-radius: 15px;">
+              <div class="card-body">
+                <h5 class="card-title">West Godavari</h5>
+                <h6 class="card-subtitle mb-2 text-muted">State: Andhra Pradesh</h6>
+                <a href="{{ url_for('West_Godavari_page') }}" class="card-link btn btn-primary">Go</a>
+              </div>
+          </div>
+        </div>
+      </div>
+        <div class="col">
+          <!-- One of three columns -->
+        </div>
+      </div>
+  </div>
+{% endblock %}

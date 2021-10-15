@@ -10,6 +10,7 @@
 
 body{
     background-color: #57CC99;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .carsimg{
@@ -76,6 +77,7 @@ select{
 
 .output{
     text-align: center;
+    margin: auto;
 }
 
 th{

@@ -58,10 +58,11 @@ def predict_Anantapur():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
@@ -93,10 +94,11 @@ def predict_Chittoor():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
@@ -126,10 +128,11 @@ def predict_East_Godavari():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
@@ -162,14 +165,14 @@ def predict_Guntur():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
-
 
 @app.route('/Kadapa')
 def Kadapa_page():
@@ -196,10 +199,11 @@ def predict_Kadapa():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
@@ -236,10 +240,11 @@ def predict_Krishna():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
@@ -270,14 +275,14 @@ def predict_Kurnool():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
-
 
 @app.route('/Nellore')
 def Nellore_page():
@@ -312,10 +317,11 @@ def predict_Nellore():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
@@ -348,10 +354,11 @@ def predict_Prakasam():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
@@ -391,10 +398,11 @@ def predict_Srikakulam():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
@@ -433,10 +441,11 @@ def predict_Visakhapatnam():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
@@ -468,10 +477,11 @@ def predict_Vizianagaram():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)
@@ -515,10 +525,11 @@ def predict_West_Godavari():
 
     ans = dict()
     for i in range(len(model.classes_)):
+        model.classes_[i] = model.classes_[i].replace("+", "or")
         ans[model.classes_[i]] = "{:.2f}".format((probab_list[i] * 100))
     
-    ans_list = [(k, v) for k, v in ans.items()]
-    ans_list.sort(key = lambda x: x[1], reverse=True)
+    ans_list = [(float(v), k) for k, v in ans.items()]
+    ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
     return render_template('output.html', data=res)

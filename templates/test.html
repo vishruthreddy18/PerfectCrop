@@ -11,14 +11,14 @@
     <div class="row">
         <div class="col-10">
             <!-- map here -->
-            <iframe src="http://localhost:5000/map" width=100% height=1000vh ></iframe>
+            <iframe src="/map" width=100% height=1000vh ></iframe>
         </div>
         <div class="col-2">
         
             <div class="list-group">
 
                 {% for place in places %}
-                <button type="button" class="list-group-item list-group-item-action" onclick="location.href='http://localhost:5000/{{ place }}';" >{{ place }}</button>
+                <button type="button" class="list-group-item list-group-item-action" onclick="location.href='/{{ place }}';" >{{ place.replace('_',' ') }}</button>
                 {% endfor %}
 
               </div>

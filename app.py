@@ -555,5 +555,5 @@ def map_display():
     # folium_map = folium.Map(location=start_coords, zoom_start=14)
     return m._repr_html_()
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)

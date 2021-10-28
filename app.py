@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    random_image_selected="img"+str(random.randint(1,3))+".jpg"
+    random_image_selected="img"+str(random.randint(1,7))+".jpg"
     return render_template('home.html',random_image=random_image_selected)
 
 @app.route('/ourgoal')

@@ -52,6 +52,19 @@ def predict_Anantapur():
     crop_dict['Black Soil'] = 0
     crop_dict[SoilType] += 1
 
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    OC = OC.strip('-')
+    OC = float(OC)
+    Zn = Zn.strip('-')
+    Zn = float(Zn)
+    Fe = Fe.strip('-')
+    Fe = float(Fe)
+    Mn = Mn.strip('-')
+    Mn = float(Mn)
+
     list1 = np.array([pH, EC, OC, Zn, Fe, Mn, crop_dict['Black Soil'], crop_dict['Mixed Soil'], crop_dict['Red Soil'], crop_dict['Sandy Soil']])
     list1 = np.array([list1])
     list1[:,0:6] = scaler.transform(list1[:,0:6])
@@ -89,6 +102,21 @@ def predict_Chittoor():
     Fe = request.form['Fe']
     Mn = request.form['Mn']
 
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    OC = OC.strip('-')
+    OC = float(OC)
+    K = K.strip('-')
+    K = float(K)
+    Zn = Zn.strip('-')
+    Zn = float(Zn)
+    Fe = Fe.strip('-')
+    Fe = float(Fe)
+    Mn = Mn.strip('-')
+    Mn = float(Mn)
+
     list1 = np.array([pH, EC, OC, K, Zn, Fe, Mn])
     list1 = np.array([list1])
     list1[:,:] = scaler.transform(list1[:,:])
@@ -123,6 +151,17 @@ def predict_East_Godavari():
     P = request.form['P']
     K = request.form['K']
     Mn = request.form['Mn']
+
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    P = P.strip('-')
+    P = float(P)
+    K = K.strip('-')
+    K = float(K)
+    Mn = Mn.strip('-')
+    Mn = float(Mn)
 
     list1 = np.array([pH, EC, P, K, Mn])
     list1 = np.array([list1])
@@ -162,6 +201,21 @@ def predict_Guntur():
     Mg = request.form['Mg']
     Zn = request.form['Zn']
 
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    OC = OC.strip('-')
+    OC = float(OC)
+    K = K.strip('-')
+    K = float(K)
+    Ca = Ca.strip('-')
+    Ca = float(Ca)
+    Mg = Mg.strip('-')
+    Mg = float(Mg)
+    Zn = Zn.strip('-')
+    Zn = float(Zn)
+
     list1 = np.array([pH, EC, OC, K, Ca, Mg, Zn])
     list1 = np.array([list1])
     list1[:,:] = scaler.transform(list1[:,:])
@@ -196,6 +250,19 @@ def predict_Kadapa():
     P = request.form['P']
     K = request.form['K']
     Mn = request.form['Mn']
+
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    OC = OC.strip('-')
+    OC = float(OC)
+    P = P.strip('-')
+    P = float(P)
+    K = K.strip('-')
+    K = float(K)
+    Mn = Mn.strip('-')
+    Mn = float(Mn)
 
     list1 = np.array([pH, EC, OC, P, K, Mn])
     list1 = np.array([list1])
@@ -232,6 +299,19 @@ def predict_Krishna():
     K = request.form['K']
     Ca = request.form['Ca']
     Zn = request.form['Zn']
+
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    OC = OC.strip('-')
+    OC = float(OC)
+    K = K.strip('-')
+    K = float(K)
+    Ca = Ca.strip('-')
+    Ca = float(Ca)
+    Zn = Zn.strip('-')
+    Zn = float(Zn)
     
     SoilType = request.form['SoilType']
     crop_dict = dict()
@@ -275,6 +355,21 @@ def predict_Kurnool():
     Fe = request.form['Fe']
     Cu = request.form['Cu']
 
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    OC = OC.strip('-')
+    OC = float(OC)
+    P = P.strip('-')
+    P = float(P)
+    Zn = Zn.strip('-')
+    Zn = float(Zn)
+    Fe = Fe.strip('-')
+    Fe = float(Fe)
+    Cu = Cu.strip('-')
+    Cu = float(Cu)
+
     list1 = np.array([pH, EC, OC, P, Zn, Fe, Cu])
     list1 = np.array([list1])
     list1[:,:] = scaler.transform(list1[:,:])
@@ -292,8 +387,6 @@ def predict_Kurnool():
     res = dict()
     res['final_ans'] = ans_list
     res['district_name'] = "Kurnool"
-    print("*"*100)
-    print(res)
     return render_template('output.html', data=res)
 
 @app.route('/Nellore')
@@ -313,6 +406,23 @@ def predict_Nellore():
     Ca = request.form['Ca']
     Mg = request.form['Mg']
     Zn = request.form['Zn']
+
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    OC = OC.strip('-')
+    OC = float(OC)
+    P = P.strip('-')
+    P = float(P)
+    K = K.strip('-')
+    K = float(K)
+    Ca = Ca.strip('-')
+    Ca = float(Ca)
+    Mg = Mg.strip('-')
+    Mg = float(Mg)
+    Zn = Zn.strip('-')
+    Zn = float(Zn)
 
     SoilType = request.form['SoilType']
     crop_dict = dict()
@@ -358,6 +468,22 @@ def predict_Prakasam():
     Fe = request.form['Fe']
     Mn = request.form['Mn']
 
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    P = P.strip('-')
+    P = float(P)
+    K = K.strip('-')
+    K = float(K)
+    Zn = Zn.strip('-')
+    Zn = float(Zn)
+    Fe = Fe.strip('-')
+    Fe = float(Fe)
+    Mn = Mn.strip('-')
+    Mn = float(Mn)
+    
+
     list1 = np.array([pH, EC, P, K, Zn, Fe, Mn])
     list1 = np.array([list1])
     list1[:,:] = scaler.transform(list1[:,:])
@@ -393,6 +519,21 @@ def predict_Srikakulam():
     P = request.form['P']
     Fe = request.form['Fe']
     Mn = request.form['Mn']
+
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    OC = OC.strip('-')
+    OC = float(OC)
+    P = P.strip('-')
+    P = float(P)
+    Fe = Fe.strip('-')
+    Fe = float(Fe)
+    Mn = Mn.strip('-')
+    Mn = float(Mn)
+
+    
 
     SoilType = request.form['SoilType']
     crop_dict = dict()
@@ -439,6 +580,17 @@ def predict_Visakhapatnam():
     P = request.form['P']
     Fe = request.form['Fe']
 
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    OC = OC.strip('-')
+    OC = float(OC)
+    P = P.strip('-')
+    P = float(P)
+    Fe = Fe.strip('-')
+    Fe = float(Fe)
+
     SoilType = request.form['SoilType']
     crop_dict = dict()
     crop_dict['Black Sandy Soil'] = 0
@@ -484,6 +636,21 @@ def predict_Vizianagaram():
     Fe = request.form['Fe']
     Mn = request.form['Mn']
 
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    OC = OC.strip('-')
+    OC = float(OC)
+    P = P.strip('-')
+    P = float(P)
+    K = K.strip('-')
+    K = float(K)
+    Fe = Fe.strip('-')
+    Fe = float(Fe)
+    Mn = Mn.strip('-')
+    Mn = float(Mn)
+
     list1 = np.array([pH, EC, OC, P, K, Fe, Mn])
     list1 = np.array([list1])
     list1[:,:] = scaler.transform(list1[:,:])
@@ -516,6 +683,13 @@ def predict_West_Godavari():
     pH = request.form['pH']
     EC = request.form['EC']
     Mn = request.form['Mn']
+
+    pH = pH.strip('-')
+    pH = float(pH)
+    EC = EC.strip('-')
+    EC = float(EC)
+    Mn = Mn.strip('-')
+    Mn = float(Mn)
 
     SoilType = request.form['SoilType']
     crop_dict = dict()

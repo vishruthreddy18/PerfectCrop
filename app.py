@@ -11,6 +11,9 @@ def home_page():
     random_image_selected="img"+str(random.randint(1,3))+".jpg"
     return render_template('home.html',random_image=random_image_selected)
 
+@app.route('/ourgoal')
+def our_goal():
+    return render_template('our_goal.html')
 
 @app.route('/about')
 def about_page():
@@ -289,6 +292,8 @@ def predict_Kurnool():
     res = dict()
     res['final_ans'] = ans_list
     res['district_name'] = "Kurnool"
+    print("*"*100)
+    print(res)
     return render_template('output.html', data=res)
 
 @app.route('/Nellore')

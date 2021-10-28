@@ -6,20 +6,23 @@
 {% block body_block %}
     <div class="container">
         <br>
+        <h1><i>West Godavari</i></h1>
+        <br>
+        <br>
         <form method="POST" action="{{url_for('predict_West_Godavari')}}">
             <div class="col-sm-7">
                 <label for="pH" class="form-label">power of Hydrogen (pH)</label>
-                <input type="number", class="form-control", placeholder="min = 4, max = 9", id="pH", name="pH", step="any", min="4", max="9", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: Not Applicable", data-bs-content="Min Value = 4, Max Value = 9", id="pH", name="pH", step="any", min="4", max="9", required>
             </div>
             <br>
             <div class="col-sm-7">
                 <label for="EC" class="form-label">Electrical Conductivity (EC)</label>
-                <input type="number", class="form-control", placeholder="min = 0, max = 6.5", id="EC", name="EC", step="any", min="0", max="6.5", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: mS/cm (microSiemens per linear centimeter)", data-bs-content="Min Value = 0, Max Value = 6.5", id="EC", name="EC", step="any", min="0", max="6.5", required>
             </div>
             <br>
             <div class="col-sm-7">
                 <label for="Mn" class="form-label">Manganese (Mn)</label>
-                <input type="number", class="form-control", placeholder="min = 0, max = 95", id="Mn", name="Mn", step="any", min="0", max="95", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: mg/kg (=ppm, parts per million)", data-bs-content="Min Value = 0, Max Value = 95", id="Mn", name="Mn", step="any", min="0", max="95", required>
             </div>
             <br>
             <div class="col-sm-7">

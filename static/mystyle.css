@@ -78,6 +78,8 @@ select{
 .output{
     text-align: center;
     margin: auto;
+    margin-top: 70px;
+    margin-bottom: 120px;
 }
 
 th{
@@ -98,11 +100,6 @@ td{
     border: 2px solid sienna;
     background-color: honeydew;
     font-weight: 400;
-}
-
-.output{
-    margin-top: 150px;
-    margin-bottom: 150px;
 }
 
 

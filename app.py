@@ -65,6 +65,7 @@ def predict_Anantapur():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Anantapur"
     return render_template('output.html', data=res)
 
 
@@ -101,6 +102,7 @@ def predict_Chittoor():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Chittoor"
     return render_template('output.html', data=res)
 
 
@@ -135,6 +137,7 @@ def predict_East_Godavari():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "East Godavari"
     return render_template('output.html', data=res)
 
 
@@ -172,6 +175,7 @@ def predict_Guntur():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Guntur"
     return render_template('output.html', data=res)
 
 @app.route('/Kadapa')
@@ -206,6 +210,7 @@ def predict_Kadapa():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Kadapa"
     return render_template('output.html', data=res)
 
 
@@ -247,6 +252,7 @@ def predict_Krishna():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Krishna"
     return render_template('output.html', data=res)
 
 @app.route('/Kurnool')
@@ -282,6 +288,7 @@ def predict_Kurnool():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Kurnool"
     return render_template('output.html', data=res)
 
 @app.route('/Nellore')
@@ -324,6 +331,7 @@ def predict_Nellore():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Nellore"
     return render_template('output.html', data=res)
 
 
@@ -361,6 +369,7 @@ def predict_Prakasam():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Prakasam"
     return render_template('output.html', data=res)
 
 
@@ -405,6 +414,7 @@ def predict_Srikakulam():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Srikakulam"
     return render_template('output.html', data=res)
 
 
@@ -448,6 +458,7 @@ def predict_Visakhapatnam():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Visakhapatnam"
     return render_template('output.html', data=res)
 
 
@@ -484,6 +495,7 @@ def predict_Vizianagaram():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "Vizianagaram"
     return render_template('output.html', data=res)
 
 
@@ -532,6 +544,7 @@ def predict_West_Godavari():
     ans_list.sort(reverse=True)
     res = dict()
     res['final_ans'] = ans_list
+    res['district_name'] = "West Godavari"
     return render_template('output.html', data=res)
 
 @app.route('/map')

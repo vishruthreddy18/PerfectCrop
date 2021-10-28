@@ -6,45 +6,48 @@
 {% block body_block %}
     <div class="container">
         <br>
+        <h1><i>Nellore</i></h1>
+        <br>
+        <br>
         <form method="POST" action="{{url_for('predict_Nellore')}}">
             <div class="col-sm-7">
                 <label for="pH" class="form-label">power of Hydrogen (pH)</label>
-                <input type="number", class="form-control", placeholder="min = 5, max = 10", id="pH", name="pH", step="any", min="5", max="10", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: Not Applicable", data-bs-content="Min Value = 5, Max Value = 10", id="pH", name="pH", step="any", min="5", max="10", required>
             </div>
             <br>
             <div class="col-sm-7">
                 <label for="EC" class="form-label">Electrical Conductivity (EC)</label>
-                <input type="number", class="form-control", placeholder="min = 0, max = 8.2", id="EC", name="EC", step="any", min="0", max="8.2", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: mS/cm (microSiemens per linear centimeter)", data-bs-content="Min Value = 0, Max Value = 8.2", id="EC", name="EC", step="any", min="0", max="8.2", required>
             </div>
             <br>
             <div class="col-sm-7">
                 <label for="OC" class="form-label">Organic Carbon (OC)</label>
-                <input type="number", class="form-control", placeholder="min = 0, max = 1.5", id="OC", name="OC", step="any", min="0", max="1.5", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: Not Applicable (%)", data-bs-content="Min Value = 0, Max Value = 1.5", id="OC", name="OC", step="any", min="0", max="1.5", required>
             </div>
             <br>
             <div class="col-sm-7">
                 <label for="P" class="form-label">Phosphorus (P)</label>
-                <input type="number", class="form-control", placeholder="min = 0, max = 150", id="P", name="P", step="any", min="0", max="150", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: mg/kg (=ppm, parts per million)", data-bs-content="Min Value = 0, Max Value = 150", id="P", name="P", step="any", min="0", max="150", required>
             </div>
             <br>
             <div class="col-sm-7">
                 <label for="K" class="form-label">Potassium (K)</label>
-                <input type="number", class="form-control", placeholder="min = 27, max = 2100", id="K", name="K", step="any", min="27", max="2100", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: mg/kg (=ppm, parts per million)", data-bs-content="Min Value = 27, Max Value = 2100", id="K", name="K", step="any", min="27", max="2100", required>
             </div>
             <br>
             <div class="col-sm-7">
                 <label for="Ca" class="form-label">Calcium (Ca)</label>
-                <input type="number", class="form-control", placeholder="min = 225, max = 9780", id="Ca", name="Ca", step="any", min="225", max="9780", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: mg/kg (=ppm, parts per million)", data-bs-content="Min Value = 225, Max Value = 9780", id="Ca", name="Ca", step="any", min="225", max="9780", required>
             </div>
             <br>
             <div class="col-sm-7">
                 <label for="Mg" class="form-label">Magnesium (Mg)</label>
-                <input type="number", class="form-control", placeholder="min = 40, max = 2000", id="Mg", name="Mg", step="any", min="40", max="2000", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: mg/kg (=ppm, parts per million)", data-bs-content="Min Value = 40, Max Value = 2000", id="Mg", name="Mg", step="any", min="40", max="2000", required>
             </div>
             <br>
             <div class="col-sm-7">
                 <label for="Zn" class="form-label">Zinc (Zn)</label>
-                <input type="number", class="form-control", placeholder="min = 0, max = 25", id="Zn", name="Zn", step="any", min="0", max="25", required>
+                <input type="number", class="form-control", data-bs-toggle="popover", data-bs-trigger="focus", title="Units: mg/kg (=ppm, parts per million)", data-bs-content="Min Value = 0, Max Value = 25", id="Zn", name="Zn", step="any", min="0", max="25", required>
             </div>
             <br>
             <div class="col-sm-7">

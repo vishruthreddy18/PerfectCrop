@@ -1,0 +1,113 @@
+#logo{
+    border-radius: 18%;
+}
+
+#AboutUs{
+    font-size: 17px;
+    color: brown;
+    font-weight: bold;
+}
+
+body{
+    background-color: darkseagreen;
+}
+
+.carsimg{
+    height: 100px;
+    width: 100px;
+}
+
+h1{
+    text-align: center;
+}
+
+#jumbo{
+    color: crimson;
+}
+
+.carousel-item{
+    
+    height: 500px;
+    width: 1100px;
+    color: brown;
+    margin-left: 220px;
+    margin-top: 30px;
+}
+
+.imgincars{
+    height: 500px;
+    width: 1100px;
+    border-radius: 11px;
+}
+
+.para{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: indigo;
+    font-style: oblique;
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    font-size: medium;
+}
+
+#tab1{
+    align-content: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    margin-left: 20px;
+}
+
+.card{
+    background-color: lightgreen;
+}
+
+form{
+    text-align: center;
+    margin-left: 390px;
+}
+
+input{
+    text-align: center;
+}
+
+select{
+    text-align: center;
+}
+
+.output{
+    text-align: center;
+}
+
+th{
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 2px solid sienna;
+    background-color: silver;
+    font-weight: 600;
+}
+
+td{
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 2px solid sienna;
+    background-color: honeydew;
+    font-weight: 400;
+}
+
+.output{
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+

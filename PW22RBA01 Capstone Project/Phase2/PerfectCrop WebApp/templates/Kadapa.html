@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title_block %}
+    <title> Kadapa </title> 
+{% endblock %}
+
+{% block body_block %}
+    <div class="container">
+        <br>
+        <form method="POST" action="{{url_for('predict_Kadapa')}}">
+            <div class="col-sm-7">
+                <label for="pH" class="form-label">power of Hydrogen (pH)</label>
+                <input type="number", class="form-control", id="pH", name="pH", step="any", min="4", max="10.5", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="EC" class="form-label">Electrical Conductivity (EC)</label>
+                <input type="number", class="form-control", id="EC", name="EC", step="any", min="0", max="29", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="OC" class="form-label">Organic Carbon (OC)</label>
+                <input type="number", class="form-control", id="OC", name="OC", step="any", min="0", max="2", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="P" class="form-label">Phosphorus (P)</label>
+                <input type="number", class="form-control", id="P", name="P", step="any", min="0", max="90", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="K" class="form-label">Potassium (K)</label>
+                <input type="number", class="form-control", id="K", name="K", step="any", min="10", max="1320", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <label for="Mn" class="form-label">Manganese (Mn)</label>
+                <input type="number", class="form-control", id="Mn", name="Mn", step="any", min="0", max="70", required>
+            </div>
+            <br>
+            <div class="col-sm-7">
+                <input type="submit", class="btn btn-primary", value="Predict!">
+            </div>
+            <br>
+            <br> 
+        </form>
+    </div>
+{% endblock %}
